@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-app
+spec:
+  replicas: 4  # Número de réplicas
+  selector:
+    matchLabels:
+      app: frontend-app
+  template:
+    metadata:
+      labels:
+        app: frontend-app
+    spec:
+      containers:
+      - name: frontend-app
+        image: nginx  # La imagen de tu aplicación frontend
+        ports:
+        - containerPort: 80  # Puerto en el que la aplicación frontend escucha

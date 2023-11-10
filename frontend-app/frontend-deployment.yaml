@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend-app
-        image: nginx  # La imagen de tu aplicación frontend
+        #image: nginx  # La imagen de tu aplicación frontend
+        image: some-wordpress
         ports:
         - containerPort: 80  # Puerto en el que la aplicación frontend escucha
